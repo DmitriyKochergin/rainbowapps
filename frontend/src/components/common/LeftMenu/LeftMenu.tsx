@@ -16,12 +16,12 @@ const LeftMenu: FC = (): JSX.Element => {
   const navModulesList: NavModulesList[] = [
     {
       navId: 0,
-      label: intl.formatMessage( { id: 'forkids', defaultMessage:'For Kids' }),
+      label: intl.formatMessage({ id: 'forkids', defaultMessage: 'For Kids' }),
       path: '/forkids',
     },
     {
       navId: 1,
-      label: intl.formatMessage({ id: 'crocodile', defaultMessage:'Crocodile' }),
+      label: intl.formatMessage({ id: 'crocodile', defaultMessage: 'Crocodile' }),
       path: '/crocodile',
     },
   ];
@@ -42,7 +42,7 @@ const LeftMenu: FC = (): JSX.Element => {
   return (
     <>
       <div onMouseDown={onToggle} className="menu-button cursor-pointer select-none">
-        <Icon icon={menuOutline} width={32} height={32} />
+        <Icon icon={menuOutline} width={32} height={32}/>
       </div>
       <Drawer
         className="left-menu"
@@ -59,7 +59,7 @@ const LeftMenu: FC = (): JSX.Element => {
         placement="left"
         onClose={onClose}
         visible={visible}
-        closeIcon={<Icon icon={closeOutline} width={22} height={22} />}
+        closeIcon={<Icon icon={closeOutline} width={22} height={22}/>}
         bodyStyle={{
           padding: 0,
           display: 'flex',
@@ -68,16 +68,17 @@ const LeftMenu: FC = (): JSX.Element => {
         width={320}
       >
         {
-            navModulesList.map(({ navId, label, path }) => {
-              const isActiveMenuItem = curPath.startsWith(path) || (curPath === '/' && navId === 0);
-              return (
-                <div key={navId} className="cursor-pointer">
-                  <div className={clsx('text-base menu-item', isActiveMenuItem && 'active')} onMouseDown={() => onClick(path)}>
-                    {label}
-                  </div>
+          navModulesList.map(({ navId, label, path }) => {
+            const isActiveMenuItem = curPath.startsWith(path) || (curPath === '/' && navId === 0);
+            return (
+              <div key={navId} className="cursor-pointer">
+                <div className={clsx('text-base menu-item', isActiveMenuItem && 'active')}
+                     onMouseDown={() => onClick(path)}>
+                  {label}
                 </div>
-              );
-            })
+              </div>
+            );
+          })
         }
       </Drawer>
     </>

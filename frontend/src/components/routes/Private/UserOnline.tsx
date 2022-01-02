@@ -14,9 +14,9 @@ const UserOnline: FC<Props> = ({
     <Route
       {...rest}
       render={(props) =>
-            <AppPage pageProps={pageProps}>
-              { Component ? <Component {...props} /> : children }
-            </AppPage>
+        <AppPage pageProps={pageProps}>
+          {Component ? <Component {...props} /> : children}
+        </AppPage>
       }
     />
   );

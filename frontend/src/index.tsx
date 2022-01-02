@@ -12,9 +12,9 @@ import 'styles/main.scss';
 ReactDOM.render(
   <Provider store={store}>
     <IntlProvider messages={localization.ru} locale="ru">
-        <Router history={history}>
-          <App />
-        </Router>
+      <Router history={history}>
+        <App/>
+      </Router>
     </IntlProvider>
   </Provider>,
   document.getElementById('root'),

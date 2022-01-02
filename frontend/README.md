@@ -2,7 +2,6 @@
 
 In order to run this on a local machine, please download the latest source code
 
-
 I) To run in browser please use
 
 ```

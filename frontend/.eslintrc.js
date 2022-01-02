@@ -46,7 +46,7 @@ module.exports = {
     'react/destructuring-assignment': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
     'max-len': [2, { code: 300, ignorePattern: '^import .*' }],
-    'jsx-a11y/no-autofocus': [ 2, { 'ignoreNonDOM': true }],
+    'jsx-a11y/no-autofocus': [2, { 'ignoreNonDOM': true }],
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/await-thenable': 'off',

@@ -11,11 +11,11 @@ const AuthLayout: FC = ({ children }): JSX.Element => {
     <AppContext.Provider value={{ theme, setTheme }}>
       <div className={`theme-${theme} absolute inset-0 overflow-hidden`} ref={appContainer}>
         <div className="absolute inset-0 overflow-hidden flex flex-col bg-ivory transition duration-300">
-          <Header />
+          <Header/>
 
           {children}
 
-          <Error />
+          <Error/>
         </div>
       </div>
     </AppContext.Provider>

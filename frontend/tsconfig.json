@@ -21,14 +21,14 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "./src",
+    "baseUrl": "./src"
   },
   "include": [
     "src",
     ".eslintrc.js",
-    "types/**.d.ts",
+    "types/**.d.ts"
   ],
   "exclude": [
-    "craco.config.js",
+    "craco.config.js"
   ]
 }

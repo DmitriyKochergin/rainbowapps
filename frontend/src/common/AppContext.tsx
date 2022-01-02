@@ -8,4 +8,4 @@ interface ThemeProps {
 export default createContext({
   theme: 'light',
   setTheme: (t) => t,
-} as  ThemeProps);
+} as ThemeProps);

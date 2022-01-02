@@ -26,7 +26,7 @@ module.exports = {
       'radical-red': '#ff4d4f',
       'candy': '#ffccc7',
       'white-smoke': '#fff1f0',
-  
+
       gray: {
         100: '#f7fafc',
         200: '#edf2f7',
