@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "http://dkochergin.kiev.luxoft.com:3000/static/css/main.50b9492f.chunk.css",
-    "main.js": "http://dkochergin.kiev.luxoft.com:3000/static/js/main.7ed40862.chunk.js",
-    "main.js.map": "http://dkochergin.kiev.luxoft.com:3000/static/js/main.7ed40862.chunk.js.map",
-    "runtime-main.js": "http://dkochergin.kiev.luxoft.com:3000/static/js/runtime-main.aacb9049.js",
-    "runtime-main.js.map": "http://dkochergin.kiev.luxoft.com:3000/static/js/runtime-main.aacb9049.js.map",
-    "static/css/2.d14591e1.chunk.css": "http://dkochergin.kiev.luxoft.com:3000/static/css/2.d14591e1.chunk.css",
-    "static/js/2.6931977f.chunk.js": "http://dkochergin.kiev.luxoft.com:3000/static/js/2.6931977f.chunk.js",
-    "static/js/2.6931977f.chunk.js.map": "http://dkochergin.kiev.luxoft.com:3000/static/js/2.6931977f.chunk.js.map",
-    "index.html": "http://dkochergin.kiev.luxoft.com:3000/index.html",
-    "static/css/2.d14591e1.chunk.css.map": "http://dkochergin.kiev.luxoft.com:3000/static/css/2.d14591e1.chunk.css.map",
-    "static/css/main.50b9492f.chunk.css.map": "http://dkochergin.kiev.luxoft.com:3000/static/css/main.50b9492f.chunk.css.map",
-    "static/js/2.6931977f.chunk.js.LICENSE.txt": "http://dkochergin.kiev.luxoft.com:3000/static/js/2.6931977f.chunk.js.LICENSE.txt",
-    "static/media/main.scss": "http://dkochergin.kiev.luxoft.com:3000/static/media/Mark-Thin.7f89cabc.ttf"
+    "main.css": "/rainbowapps/static/css/main.9c7775bc.chunk.css",
+    "main.js": "/rainbowapps/static/js/main.55221825.chunk.js",
+    "main.js.map": "/rainbowapps/static/js/main.55221825.chunk.js.map",
+    "runtime-main.js": "/rainbowapps/static/js/runtime-main.8814aacc.js",
+    "runtime-main.js.map": "/rainbowapps/static/js/runtime-main.8814aacc.js.map",
+    "static/css/2.6e61d1e6.chunk.css": "/rainbowapps/static/css/2.6e61d1e6.chunk.css",
+    "static/js/2.aa1b9024.chunk.js": "/rainbowapps/static/js/2.aa1b9024.chunk.js",
+    "static/js/2.aa1b9024.chunk.js.map": "/rainbowapps/static/js/2.aa1b9024.chunk.js.map",
+    "index.html": "/rainbowapps/index.html",
+    "static/css/2.6e61d1e6.chunk.css.map": "/rainbowapps/static/css/2.6e61d1e6.chunk.css.map",
+    "static/css/main.9c7775bc.chunk.css.map": "/rainbowapps/static/css/main.9c7775bc.chunk.css.map",
+    "static/js/2.aa1b9024.chunk.js.LICENSE.txt": "/rainbowapps/static/js/2.aa1b9024.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/rainbowapps/static/media/Mark-Thin.7f89cabc.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.aacb9049.js",
-    "static/css/2.d14591e1.chunk.css",
-    "static/js/2.6931977f.chunk.js",
-    "static/css/main.50b9492f.chunk.css",
-    "static/js/main.7ed40862.chunk.js"
+    "static/js/runtime-main.8814aacc.js",
+    "static/css/2.6e61d1e6.chunk.css",
+    "static/js/2.aa1b9024.chunk.js",
+    "static/css/main.9c7775bc.chunk.css",
+    "static/js/main.55221825.chunk.js"
   ]
 }
