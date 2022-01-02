@@ -1,0 +1,1 @@
+export const SELECT_APPLICATION = 'root/SELECT_APPLICATION';

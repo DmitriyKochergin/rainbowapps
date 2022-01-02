@@ -1,0 +1,133 @@
+.ant-popover-inner-content {
+  padding: 0 !important;
+}
+
+.ant-popover-inner {
+  border-radius: 4px;
+}
+
+.ant-popover-title {
+  font-size: 18px;
+  padding: 14px 28px 11px;
+}
+
+.ant-checkbox-checked::after {
+  display: none;
+}
+
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  box-shadow: none;
+}
+
+.ant-drawer {
+  top: 60px;
+  height: calc(100% - 60px);
+
+  .ant-drawer-title {
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.ant-pagination-item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.anticon-close {
+  width: 12.72px;
+  height: 13.1px;
+  color: #8c8c8c;
+}
+
+.ant-modal-footer .ant-btn {
+  width: 90px;
+}
+
+.ant-modal-close:focus,
+.ant-modal-close:hover {
+  outline: none;
+}
+
+.ant-select-item,
+.ant-select-selection-item {
+  display: flex;
+  align-items: center;
+}
+
+.ant-btn {
+  padding: 9px 15px;
+  border-radius: 4px;
+}
+
+.ant-btn-primary {
+  color: #fff;
+  background: #231f20;
+  border-color: #231f20;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+
+.ant-btn-primary:focus,
+.ant-btn-primary:hover {
+  color: #fff;
+  background: #302e2e;
+  border-color: #302e2e;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  color: #262626;
+  font-weight: 600;
+  background-color: #fffcf0 !important;
+}
+
+.ant-checkbox-wrapper {
+  line-height: 22px;
+}
+
+.ant-tag {
+  border-radius: 4px !important;
+}
+
+.ant-tag-red {
+  color: #a8071a;
+  background: #fff1f0;
+  border: 1px solid #ffa39e;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.ant-tag-green {
+  color: #135200;
+  background: #f6ffed;
+  border: 1px solid #b7eb8f;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.ant-form-item-control-input-content {
+  line-height: 22px;
+}
+
+.ant-table-column-sorters {
+  font-weight: 550;
+}
+
+.ant-tabs-nav-list {
+  font-weight: 550;
+  line-height: 22px;
+}
+
+.ant-drawer-close {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.ant-layout-header {
+  padding: 0;
+  color: #fff;
+}
