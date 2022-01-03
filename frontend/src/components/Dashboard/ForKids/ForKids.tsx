@@ -3,6 +3,8 @@ import ReactSwipe from 'react-swipe';
 
 import './ForKids.scss';
 import { useIntl } from 'react-intl';
+import { Icon } from '@iconify/react';
+import { play } from './audio/Audios';
 
 const fruits = [
   'banana',
@@ -23,8 +25,6 @@ const ForKids: FC = (): JSX.Element => {
 
   const intl = useIntl();
   let reactSwipeEl: ReactSwipe;
-  // preload audio
-  new Audio(process.env.PUBLIC_URL + '/audio/ES_Arcade Game Tap 1.mp3');
 
   return (
     <div className='p-10'>
@@ -46,20 +46,18 @@ const ForKids: FC = (): JSX.Element => {
           })}
         </ReactSwipe>
         <div className={'carousel-buttons flex flex-row justify-between'}>
-          <div className={'carousel-button'} onClick={() => {
+          <div className={'carousel-button'} onTouchStart={() => {
             reactSwipeEl.prev();
-            const audio = new Audio(process.env.PUBLIC_URL + '/audio/ES_Arcade Game Tap 1.mp3');
-            audio.addEventListener('canplaythrough', event => {
-              void audio.play();
-            });
-          }}> &lt;&lt; </div>
-          <div className={'carousel-button'} onClick={() => {
+            play('tap');
+          }}> <Icon icon="clarity:rewind-solid" /> </div>
+          <div className={'carousel-button'} onTouchStart={() => {
+
+            play('tap');
+          }}> <Icon icon="clarity:play-solid" /> </div>
+          <div className={'carousel-button'} onTouchStart={() => {
             reactSwipeEl.next();
-            const audio = new Audio(process.env.PUBLIC_URL + '/audio/ES_Arcade Game Tap 1.mp3');
-            audio.addEventListener('canplaythrough', event => {
-              void audio.play();
-            });
-          }}> &gt;&gt; </div>
+            play('tap');
+          }}> <Icon icon="clarity:fast-forward-solid" /> </div>
         </div>
       </div>
     </div>
