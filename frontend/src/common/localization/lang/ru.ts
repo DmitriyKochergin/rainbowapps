@@ -1,5 +1,5 @@
 const en = {
-  'Rainbow apps': 'Радужные программы',
+  apps: 'Радужные программы',
   Modules: 'Программы',
   forkids: 'Для детей',
   crocodile: 'Крокодил',

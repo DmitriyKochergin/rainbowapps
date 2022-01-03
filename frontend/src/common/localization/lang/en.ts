@@ -1,5 +1,5 @@
 const en = {
-  'Rainbow apps': 'Rainbow apps',
+  apps: 'Rainbow apps',
   Modules: 'Modules',
   forkids: 'For Kids',
   crocodile: 'Crocodile',

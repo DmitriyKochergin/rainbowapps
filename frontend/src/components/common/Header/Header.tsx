@@ -23,7 +23,7 @@ const Header: FC = (): JSX.Element => {
         <div className={clsx('flex flex-col pt-10 pb-10')}>
             <span className={clsx('text-sm')}>
               <FormattedMessage
-                id="Rainbow apps"
+                id="apps"
                 defaultMessage="Rainbow apps"
               />
             </span>

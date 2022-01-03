@@ -55,6 +55,7 @@ const LeftMenu: FC = (): JSX.Element => {
               id="Modules"
               defaultMessage="Modules"
             />
+            <sup>©</sup>
           </span>
         )}
         placement="left"

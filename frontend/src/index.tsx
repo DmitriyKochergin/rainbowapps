@@ -11,6 +11,7 @@ import 'styles/main.scss';
 ReactDOM.render(
   <Provider store={store}>
     <IntlProvider messages={localization.ru} locale="ru">
+      {/*use HashRouter for GutHub Pages routing works only for exact match for url, any subdomains will result in 404*/}
       <HashRouter>
         <App/>
       </HashRouter>
