@@ -1,5 +1,6 @@
 {
   "name": "@rainbow/apps",
+  "homepage": "https://DmitriyKochergin.github.io/rainbowapps",
   "version": "0.0.1",
   "private": true,
   "proxy": "",
@@ -73,17 +74,20 @@
     "stylelint-scss": "^3.21.0",
     "tailwindcss": "^2.2.17",
     "webpack-bundle-analyzer": "^4.5.0",
-    "webpackbar": "^5.0.0-3"
+    "webpackbar": "^5.0.0-3",
+    "gh-pages": "^3.2.3"
   },
   "scripts": {
     "build:antd": "nodemon -w craco.config.js -w ./src/styles/antd/themeCustomize.less 3001 --exec \"craco start\"",
     "build:tailwind": "postcss tailwind.config.css -o src/styles/tailwind.css",
     "start": "cross-env craco start",
-    "build": "cross-env PUBLIC_URL=/app ESLINT_NO_DEV_ERRORS=true DISABLE_ESLINT_PLUGIN=true craco build",
+    "build": "cross-env ESLINT_NO_DEV_ERRORS=true DISABLE_ESLINT_PLUGIN=true craco build",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "lint-fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "stylelint": "stylelint '**/*.scss'",
-    "stylelint-fix": "stylelint '**/*.scss' --fix"
+    "stylelint-fix": "stylelint '**/*.scss' --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,17 +1,17 @@
 import { FC, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { Drawer } from 'antd';
 import { Icon } from '@iconify/react';
 import closeOutline from '@iconify-icons/eva/close-outline';
 import menuOutline from '@iconify-icons/eva/menu-outline';
-import history from 'common/utils/historyUtils';
 
 const LeftMenu: FC = (): JSX.Element => {
   const intl = useIntl();
   const { pathname: curPath } = useLocation();
   const [visible, setVisible] = useState(false);
+  const history = useHistory();
 
   const navModulesList: NavModulesList[] = [
     {

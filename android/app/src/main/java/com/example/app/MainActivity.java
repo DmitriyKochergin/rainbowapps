@@ -18,7 +18,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         // REMOTE RESOURCE
-        String hostname = "https://vc.ru/marketing/161257-kak-zarabatyvat-do-35-000-rubley-v-den-na-prostom-webview-prilozhenii";
+//        String hostname = "https://vc.ru/marketing/161257-kak-zarabatyvat-do-35-000-rubley-v-den-na-prostom-webview-prilozhenii";
+        String hostname = "https://dmitriykochergin.github.io/rainbowapps/";
         // LOCAL RESOURCE
 //         String hostname = "file:///android_asset/index.html";
 
