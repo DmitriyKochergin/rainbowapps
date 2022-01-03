@@ -6,6 +6,7 @@ import { Drawer } from 'antd';
 import { Icon } from '@iconify/react';
 import closeOutline from '@iconify-icons/eva/close-outline';
 import menuOutline from '@iconify-icons/eva/menu-outline';
+import { isTouch } from '../../../common/utils/commonUtils';
 
 const LeftMenu: FC = (): JSX.Element => {
   const intl = useIntl();
@@ -41,7 +42,7 @@ const LeftMenu: FC = (): JSX.Element => {
 
   return (
     <>
-      <div onMouseDown={onToggle} className="menu-button cursor-pointer select-none">
+      <div onMouseDown={isTouch ? () => {} : onToggle} onTouchStart={onToggle} className="menu-button cursor-pointer select-none">
         <Icon icon={menuOutline} width={32} height={32}/>
       </div>
       <Drawer
@@ -73,7 +74,9 @@ const LeftMenu: FC = (): JSX.Element => {
             return (
               <div key={navId} className="cursor-pointer">
                 <div className={clsx('text-base menu-item', isActiveMenuItem && 'active')}
-                     onMouseDown={() => onClick(path)}>
+                     onMouseDown={isTouch ? () => {} : () => onClick(path)}
+                     onTouchStart={() => onClick(path)}
+                >
                   {label}
                 </div>
               </div>

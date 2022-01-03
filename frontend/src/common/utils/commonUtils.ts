@@ -18,3 +18,17 @@ export const deepCompareObj = <T extends CommonObj, U extends CommonObj>(oldObj:
 export const getFirstCharacterFromString = (val: string): string => val.charAt(0).toUpperCase();
 
 export const normalizeStrForSearch = (val: string): string => trim((toLower(val)));
+
+export const isTouchDevice = () => (('ontouchstart' in window)
+  || (navigator.maxTouchPoints > 0)
+  // @ts-ignore
+  || (navigator.msMaxTouchPoints > 0));
+
+export const isTouch = isTouchDevice();
+
+export const isMobile = window.screen.width < 768 || window.screen.height < 768;
+export const isPortrait = () => window.orientation === 0;
+
+export const isSafari = /Safari\//.test(navigator.userAgent) && !/(Chrome\/|Android\s)/.test(navigator.userAgent);
+export const isSafariMacintosh = isSafari && navigator.userAgent.includes('Macintosh');
+export const isSafariIPhone = isSafari && navigator.userAgent.includes('iPhone');
