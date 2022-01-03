@@ -2,24 +2,26 @@ import { FC } from 'react';
 import ReactSwipe from 'react-swipe';
 
 import './ForKids.scss';
+import { useIntl } from 'react-intl';
 
-const descriptions = [
-  ['banana', 'БАНАН'],
-  ['strawberry', 'КЛУБНИКА'],
-  ['kiwi', 'КИВИ'],
-  ['peach', 'ПЕРСИК'],
-  ['orange', 'АПЕЛЬСИН'],
-  ['pear', 'ГРУША'],
-  ['lemon', 'ЛИМОН'],
-  ['plum', 'СЛИВА'],
-  ['apple', 'ЯБЛОКО'],
-  ['pineapple', 'АНАНАС'],
-  ['cherry', 'ВИШНЯ'],
-  ['pomegranate', 'ГРАНАТ'],
+const fruits = [
+  'banana',
+  'strawberry',
+  'kiwi',
+  'peach',
+  'orange',
+  'pear',
+  'lemon',
+  'plum',
+  'apple',
+  'pineapple',
+  'cherry',
+  'pomegranate',
 ];
 
 const ForKids: FC = (): JSX.Element => {
 
+  const intl = useIntl();
   let reactSwipeEl: ReactSwipe;
   // preload audio
   new Audio(process.env.PUBLIC_URL + '/audio/ES_Arcade Game Tap 1.mp3');
@@ -32,13 +34,13 @@ const ForKids: FC = (): JSX.Element => {
           swipeOptions={{ continuous: true }}
           ref={(el: ReactSwipe) => (reactSwipeEl = el)}
         >
-          {descriptions.map((description) => {
-            return (<div key={description[1]}>
+          {fruits.map((description) => {
+            return (<div key={description}>
               <div className={'item flex flex-col'}>
                 <div className={'description'}>
-                  {description[1]}
+                  {intl.formatMessage({ id: description })}
                 </div>
-                <img className={'image'} src={process.env.PUBLIC_URL + '/images/fruits/' + description[0] + '.jpg'}/>
+                <img className={'image'} src={process.env.PUBLIC_URL + '/images/fruits/' + description + '.jpg'}/>
               </div>
             </div>);
           })}
