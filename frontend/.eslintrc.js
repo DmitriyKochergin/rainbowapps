@@ -63,5 +63,6 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 'off',
     'react/require-default-props': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
+    'jsx-a11y/alt-text': 'off',
   },
 };

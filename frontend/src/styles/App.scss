@@ -1,0 +1,4 @@
+/*iframe appears after hot code refresh and user cannot click anywhere because of it*/
+body > iframe {
+  display: none;
+}
