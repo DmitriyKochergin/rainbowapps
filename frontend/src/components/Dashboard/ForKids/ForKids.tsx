@@ -41,13 +41,9 @@ const ForKids: FC = (): JSX.Element => {
             </div>);
           })}
         </ReactSwipe>
-        <div className={'ml-10'}>
-          <div style={{ display: 'inline-block', padding: '10px', border: '1px solid #555' }}
-               onClick={() => reactSwipeEl.prev()}>Previous
-          </div>
-          <div style={{ display: 'inline-block', padding: '10px', border: '1px solid #555' }}
-               onClick={() => reactSwipeEl.next()}>Next
-          </div>
+        <div className={'carousel-buttons flex flex-row justify-between'}>
+          <div className={'carousel-button'} onClick={() => reactSwipeEl.prev()}> &lt;&lt; </div>
+          <div className={'carousel-button'} onClick={() => reactSwipeEl.next()}> &gt;&gt; </div>
         </div>
       </div>
     </div>

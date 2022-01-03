@@ -2,7 +2,7 @@
   .item {
     font-weight: bold;
     color: #14ade5;
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
     margin: 10px;
     padding: 20px 10px;
@@ -11,9 +11,24 @@
     border-radius: 5px;
     border: 1px solid;
     border-color: #e5e5e5 #d3d3d3 #b9c1c6;
-  }
 
-  .image {
-    //width: 100px;
+    .description {
+      padding-bottom: 5px;
+    }
   }
+}
+
+.carousel-button {
+  display: inline-block;
+  font-weight: bold;
+  color: #14ade5;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 1px #ebebeb;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: #e5e5e5 #d3d3d3 #b9c1c6;
 }
