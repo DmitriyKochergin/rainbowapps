@@ -24,7 +24,7 @@ const Header: FC = (): JSX.Element => {
             <span className={clsx('text-sm')}>
               <FormattedMessage
                 id="apps"
-                defaultMessage="Rainbow apps"
+                defaultMessage="🌈 Rainbow apps"
               />
             </span>
           <span className="text-lg font-bold leading-10">{moduleHeader}</span>
