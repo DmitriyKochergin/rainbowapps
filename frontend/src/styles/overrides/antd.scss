@@ -23,6 +23,7 @@
 .ant-drawer {
   top: 60px;
   height: calc(100% - 60px);
+  user-select: none;
 
   .ant-drawer-title {
     font-weight: 550;
@@ -130,4 +131,5 @@
 .ant-layout-header {
   padding: 0;
   color: #fff;
+  user-select: none;
 }
