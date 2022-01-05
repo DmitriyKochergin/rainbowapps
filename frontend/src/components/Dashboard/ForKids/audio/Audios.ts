@@ -1,5 +1,5 @@
 export const Audios: { [key: string]: HTMLAudioElement } = {
-  'tap': new Audio(process.env.PUBLIC_URL + '/audio/ES_Arcade Game Tap 1.mp3'),
+  'tap': new Audio(process.env.PUBLIC_URL + '/audio/click/click.mp3'),
 };
 
 export const play = (sound: string) => {
