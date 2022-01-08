@@ -35,11 +35,13 @@ const ForKids: FC = (): JSX.Element => {
 
   useEffect(() => {
     if (autoplay) {
-      interval = setInterval(() => {
+      setTimeout(() => {
         reactSwipeEl.next();
       }, 1000);
+      interval = setInterval(() => {
+        reactSwipeEl.next();
+      }, 3000);
     } else {
-      console.log(interval);
       clearInterval(interval);
     }
   }, [autoplay]);
@@ -51,7 +53,6 @@ const ForKids: FC = (): JSX.Element => {
           className={'carousel'}
           swipeOptions={{ continuous: true }}
           ref={(el: ReactSwipe) => {
-            console.log(el);
             reactSwipeEl = el;
           }}
 
@@ -81,10 +82,12 @@ const ForKids: FC = (): JSX.Element => {
                onMouseDown={
                  isTouch ? () => {
                  } : () => {
+                   setAutoplay(false);
                    reactSwipeEl.prev();
                    play('tap');
                  }}
                onTouchStart={() => {
+                 setAutoplay(false);
                  reactSwipeEl.prev();
                  play('tap');
                }
@@ -122,10 +125,12 @@ const ForKids: FC = (): JSX.Element => {
                onMouseDown={
                  isTouch ? () => {
                  } : () => {
+                   setAutoplay(false);
                    reactSwipeEl.next();
                    play('tap');
                  }}
                onTouchStart={() => {
+                 setAutoplay(false);
                  reactSwipeEl.next();
                  play('tap');
                }}>
