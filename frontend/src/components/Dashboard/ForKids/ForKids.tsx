@@ -5,6 +5,7 @@ import './ForKids.scss';
 import { useIntl } from 'react-intl';
 import { Icon } from '@iconify/react';
 import { play } from './audio/Audios';
+import Ripple from '../../../common/ripple/Ripple';
 
 const fruits = [
   'banana',
@@ -46,18 +47,33 @@ const ForKids: FC = (): JSX.Element => {
           })}
         </ReactSwipe>
         <div className={'carousel-buttons flex flex-row justify-between'}>
+
           <div className={'carousel-button'} onTouchStart={() => {
             reactSwipeEl.prev();
             play('tap');
-          }}> <Icon icon="clarity:rewind-solid" /> </div>
-          <div className={'carousel-button'} onTouchStart={() => {
+          }}>
+            <Ripple className='carousel-button-ripple'>
+              <Icon icon="clarity:rewind-solid" className={'icon'}/>
+            </Ripple>
+          </div>
 
+          <div className={'carousel-button'} onTouchStart={() => {
             play('tap');
-          }}> <Icon icon="clarity:play-solid" /> </div>
+          }}>
+            <Ripple className='carousel-button-ripple'>
+              <Icon icon="clarity:play-solid" className={'icon'}/>
+            </Ripple>
+          </div>
+
           <div className={'carousel-button'} onTouchStart={() => {
             reactSwipeEl.next();
             play('tap');
-          }}> <Icon icon="clarity:fast-forward-solid" /> </div>
+          }}>
+            <Ripple className='carousel-button-ripple'>
+              <Icon icon="clarity:fast-forward-solid" className={'icon'}/>
+            </Ripple>
+          </div>
+
         </div>
       </div>
     </div>
