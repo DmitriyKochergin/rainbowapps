@@ -51,7 +51,7 @@ const ForKids: FC = (): JSX.Element => {
       <div>
         <ReactSwipe
           className={'carousel'}
-          swipeOptions={{ continuous: true }}
+          swipeOptions={{ continuous: true, callback: (index: number) => {play(fruits[index]);} }}
           ref={(el: ReactSwipe) => {
             reactSwipeEl = el;
           }}
