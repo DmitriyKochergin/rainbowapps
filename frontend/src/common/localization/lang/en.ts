@@ -1,9 +1,10 @@
 const en = {
-  apps: '🌈 Rainbow apps',
-  Modules: 'Modules',
-  forkids: 'For Kids',
+  apps:      '🌈 Rainbow apps',
+  Modules:   'Modules',
+  forkids:   'For Kids',
   crocodile: 'Crocodile',
 
+  fruits:      'Fruits',
   banana:      'Banana',
   strawberry:  'Strawberry',
   kiwi:        'Kiwi',
@@ -16,6 +17,9 @@ const en = {
   pineapple:   'Pineapple',
   cherry:      'Cherry',
   pomegranate: 'Pomegranate',
+
+  vegetables: 'Vegetables',
+  tomato:     'Tomato',
 };
 
 export default en;

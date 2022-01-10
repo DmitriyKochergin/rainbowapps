@@ -4,6 +4,7 @@ const en = {
   forkids:   'Для детей',
   crocodile: 'Крокодил',
 
+  fruits:      'Фрукты',
   banana:      'БАНАН',
   strawberry:  'КЛУБНИКА',
   kiwi:        'КИВИ',
@@ -16,6 +17,9 @@ const en = {
   pineapple:   'АНАНАС',
   cherry:      'ВИШНЯ',
   pomegranate: 'ГРАНАТ',
+
+  vegetables: 'Овощи',
+  tomato:     'Помидор',
 };
 
 export default en;

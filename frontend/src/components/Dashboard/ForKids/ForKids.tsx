@@ -4,27 +4,13 @@ import ReactSwipe from 'react-swipe';
 import './ForKids.scss';
 import { useIntl } from 'react-intl';
 import { Icon } from '@iconify/react';
-import { play } from './audio/AudiosCache';
+import { play } from './common/AudiosCache';
 import Ripple from '../../../common/ripple/Ripple';
 import { isTouch } from '../../../common/utils/commonUtils';
-
-const fruits = [
-  'banana',
-  'strawberry',
-  'kiwi',
-  'peach',
-  'orange',
-  'pear',
-  'lemon',
-  'plum',
-  'apple',
-  'pineapple',
-  'cherry',
-  'pomegranate',
-];
+import { CardSetCache } from './common/CardSets';
 
 let reactSwipeEl: ReactSwipe;
-let interval: NodeJS.Timer;
+let interval: NodeJS.Timer | undefined;
 
 const ForKids: FC = (): JSX.Element => {
 
@@ -32,36 +18,76 @@ const ForKids: FC = (): JSX.Element => {
 
   const [autoplay, setAutoplay] = useState<boolean>(true);
   const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [currentSet, setCurrentSet] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    if (autoplay) {
-      setTimeout(() => {
-        reactSwipeEl.next();
-      }, 1000);
-      interval = setInterval(() => {
-        reactSwipeEl.next();
-      }, 3000);
+    if (currentSet !== undefined) {
+      if (autoplay) {
+        setTimeout(() => {
+          reactSwipeEl.next();
+        }, 1000);
+        interval = setInterval(() => {
+          reactSwipeEl.next();
+        }, 3000);
+      } else {
+        if (interval !== undefined) {
+          clearInterval(interval);
+          interval = undefined;
+        }
+      }
+
+      return () => {
+        if (interval !== undefined) {
+          clearInterval(interval);
+          interval = undefined;
+        }
+      };
     } else {
-      clearInterval(interval);
+      if (interval !== undefined) {
+        clearInterval(interval);
+        interval = undefined;
+      }
     }
-    return () => {
-      clearInterval(interval);
-    };
-  }, [autoplay]);
+  }, [autoplay, currentSet]);
 
   return (
     <div className='p-10'>
-      <div>
+      {currentSet === undefined && <div className={'flex flex-row flex-flow'}>
+        {Object.keys(CardSetCache).map((card) => {
+          return <div key={card}
+                      className={'flex flex-col card'}
+                      onMouseDown={
+                        isTouch ? () => {
+                        } : () => {
+                          setCurrentSet(card);
+                        }}
+                      onTouchStart={() => {
+                        setCurrentSet(card);
+                      }}>
+            <div className={'card-image'}>
+              <img className={'image'}
+                   src={process.env.PUBLIC_URL + '/images/' + card + '/' + CardSetCache[card][0] + '.jpg'}/>
+            </div>
+            <div className={'card-name p-10 flex justify-center'}>{intl.formatMessage({ id: card })}</div>
+          </div>;
+        })}
+
+      </div>}
+      {currentSet !== undefined && <>
         <ReactSwipe
           className={'carousel'}
-          swipeOptions={{ continuous: true, startSlide: currentSlide, callback: (index: number) => {setCurrentSlide(index); play('fruits/' + fruits[index]);} }}
+          swipeOptions={{
+            continuous: true, startSlide: currentSlide, callback: (index: number) => {
+              setCurrentSlide(index);
+              play(currentSet + '/' + CardSetCache[currentSet][index]);
+            },
+          }}
           ref={(el: ReactSwipe) => {
             reactSwipeEl = el;
           }}
-
         >
-          {fruits.map((description) => {
-            return (<div key={description}
+          {CardSetCache[currentSet].map((card: string) => {
+            return (<div key={card}
                          onMouseDown={
                            isTouch ? () => {
                            } : () => {
@@ -72,15 +98,14 @@ const ForKids: FC = (): JSX.Element => {
                          }}>
               <div className={'item flex flex-col'}>
                 <div className={'description'}>
-                  {intl.formatMessage({ id: description })}
+                  {intl.formatMessage({ id: card })}
                 </div>
-                <img className={'image'} src={process.env.PUBLIC_URL + '/images/fruits/' + description + '.jpg'}/>
+                <img className={'image'} src={process.env.PUBLIC_URL + '/images/' + currentSet + '/' + card + '.jpg'}/>
               </div>
             </div>);
           })}
         </ReactSwipe>
         <div className={'carousel-buttons flex flex-row justify-between'}>
-
           <div className={'carousel-button'}
                onMouseDown={
                  isTouch ? () => {
@@ -143,7 +168,7 @@ const ForKids: FC = (): JSX.Element => {
           </div>
 
         </div>
-      </div>
+      </>}
     </div>
   )
   ;
