@@ -19,7 +19,7 @@ const en = {
   pomegranate: 'ГРАНАТ',
 
   vegetables: 'Овощи',
-  tomato:     'Помидор',
+  tomato:     'ПОМИДОР',
 };
 
 export default en;
