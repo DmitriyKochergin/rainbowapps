@@ -4,7 +4,7 @@ import ReactSwipe from 'react-swipe';
 import './ForKids.scss';
 import { useIntl } from 'react-intl';
 import { Icon } from '@iconify/react';
-import { play } from './audio/Audios';
+import { play } from './audio/AudiosCache';
 import Ripple from '../../../common/ripple/Ripple';
 import { isTouch } from '../../../common/utils/commonUtils';
 
@@ -51,7 +51,7 @@ const ForKids: FC = (): JSX.Element => {
       <div>
         <ReactSwipe
           className={'carousel'}
-          swipeOptions={{ continuous: true, callback: (index: number) => {play(fruits[index]);} }}
+          swipeOptions={{ continuous: true, callback: (index: number) => {play('fruits/' + fruits[index]);} }}
           ref={(el: ReactSwipe) => {
             reactSwipeEl = el;
           }}
@@ -84,12 +84,12 @@ const ForKids: FC = (): JSX.Element => {
                  } : () => {
                    setAutoplay(false);
                    reactSwipeEl.prev();
-                   play('tap');
+                   play('click/click');
                  }}
                onTouchStart={() => {
                  setAutoplay(false);
                  reactSwipeEl.prev();
-                 play('tap');
+                 play('click/click');
                }
                }>
             <
@@ -107,11 +107,11 @@ const ForKids: FC = (): JSX.Element => {
                  isTouch ? () => {
                  } : () => {
                    setAutoplay(!autoplay);
-                   play('tap');
+                   play('click/click');
                  }}
                onTouchStart={() => {
                  setAutoplay(!autoplay);
-                 play('tap');
+                 play('click/click');
                }}>
             <Ripple className='carousel-button-ripple'>
               {autoplay ?
@@ -127,12 +127,12 @@ const ForKids: FC = (): JSX.Element => {
                  } : () => {
                    setAutoplay(false);
                    reactSwipeEl.next();
-                   play('tap');
+                   play('click/click');
                  }}
                onTouchStart={() => {
                  setAutoplay(false);
                  reactSwipeEl.next();
-                 play('tap');
+                 play('click/click');
                }}>
             <Ripple className='carousel-button-ripple'>
               <Icon icon="clarity:fast-forward-solid" className={'icon'}/>
