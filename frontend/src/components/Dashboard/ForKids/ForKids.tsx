@@ -31,7 +31,7 @@ const ForKids: FC = (): JSX.Element => {
   const intl = useIntl();
 
   const [autoplay, setAutoplay] = useState<boolean>(true);
-
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
 
   useEffect(() => {
     if (autoplay) {
@@ -44,6 +44,9 @@ const ForKids: FC = (): JSX.Element => {
     } else {
       clearInterval(interval);
     }
+    return () => {
+      clearInterval(interval);
+    };
   }, [autoplay]);
 
   return (
@@ -51,7 +54,7 @@ const ForKids: FC = (): JSX.Element => {
       <div>
         <ReactSwipe
           className={'carousel'}
-          swipeOptions={{ continuous: true, callback: (index: number) => {play('fruits/' + fruits[index]);} }}
+          swipeOptions={{ continuous: true, startSlide: currentSlide, callback: (index: number) => {setCurrentSlide(index); play('fruits/' + fruits[index]);} }}
           ref={(el: ReactSwipe) => {
             reactSwipeEl = el;
           }}
