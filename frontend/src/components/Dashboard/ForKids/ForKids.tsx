@@ -20,6 +20,10 @@ const ForKids: FC = (): JSX.Element => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [currentSet, setCurrentSet] = useState<string | undefined>(undefined);
 
+  const sendEmail = ()=>{
+    window.location.href = 'mailto:dimakoch@ukr.net?subject=ForKids application';
+  };
+
   useEffect(() => {
     if (currentSet !== undefined) {
       if (autoplay) {
@@ -72,6 +76,38 @@ const ForKids: FC = (): JSX.Element => {
           </div>;
         })}
 
+
+        <div className='gooey-button absolute bottom-0 right-0'>
+          <svg id="button-blur" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+              <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                               result="highContrastGraphic"/>
+                <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop"/>
+              </filter>
+            </defs>
+          </svg>
+
+
+          <button className="gooey-button-div" onMouseDown={sendEmail}>
+
+            Отзыв
+            <span className="bubbles">
+                <span className="bubble"/>
+                <span className="bubble"/>
+                <span className="bubble"/>
+                <span className="bubble"/>
+                <span className="bubble"/>
+                <span className="bubble"/>
+                <span className="bubble"/>
+                <span className="bubble"/>
+                <span className="bubble"/>
+                <span className="bubble"/>
+              </span>
+          </button>
+
+        </div>
       </div>}
       {currentSet !== undefined && <>
         <ReactSwipe
@@ -170,8 +206,7 @@ const ForKids: FC = (): JSX.Element => {
         </div>
       </>}
     </div>
-  )
-  ;
+  );
 };
 
 export default ForKids;
