@@ -12,9 +12,9 @@ export const CardSetCache: { [key: string]: string[] } = {
     'pineapple',
     'cherry',
     'pomegranate',
-  ],
+  ], /*,
   'vegetables': [
     'tomato',
-  ],
+  ],*/
 };
 

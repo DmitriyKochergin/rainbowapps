@@ -79,7 +79,7 @@ const ForKids: FC = (): JSX.Element => {
           swipeOptions={{
             continuous: true, startSlide: currentSlide, callback: (index: number) => {
               setCurrentSlide(index);
-              play(currentSet + '/' + CardSetCache[currentSet][index]);
+              play(currentSet + '/' + CardSetCache[currentSet][index], 200);
             },
           }}
           ref={(el: ReactSwipe) => {
