@@ -3,6 +3,7 @@ const en = {
   Modules:   'Modules',
   forkids:   'For Kids',
   crocodile: 'Crocodile',
+  feedback:  'Feedback',
 
   fruits:      'Fruits',
   banana:      'Banana',

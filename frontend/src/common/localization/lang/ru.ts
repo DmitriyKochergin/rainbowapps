@@ -3,6 +3,7 @@ const en = {
   Modules:   'Программы',
   forkids:   'Для детей',
   crocodile: 'Крокодил',
+  feedback:  'Отзыв',
 
   fruits:      'Фрукты',
   banana:      'БАНАН',
