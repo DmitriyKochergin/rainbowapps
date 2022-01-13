@@ -1,5 +1,5 @@
 $prime: #00FF80;
-$second: #0c1016;
+$second: #2c2c2c;
 
 .gooey-button-wrapper {
   margin: 20px;
@@ -18,6 +18,8 @@ $second: #0c1016;
     filter: url('#gooey');
     position: relative;
     background-color: $prime;
+    font-family: 'Fira Sans';
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.74);
   }
 
   .bubbles {
