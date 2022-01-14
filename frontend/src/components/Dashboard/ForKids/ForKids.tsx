@@ -77,7 +77,7 @@ const ForKids: FC = (): JSX.Element => {
           </div>;
         })}
 
-        <div className={'absolute bottom-0 right-0'}>
+        <div className={'absolute w-full bottom-0 left-0 p-10 bottom-panel'}>
           <GooeyButton onClick={sendEmail} text={intl.formatMessage({ id: 'feedback' })}/>
         </div>
       </div>}
